@@ -184,7 +184,7 @@ def get_item(result, rules, artifacts, run_date):
                     mitigation=mitigation,
                     references=references,
                     cve=cve_try(result['ruleId']),  # for now we only support when the id of the rule is a CVE
-                    cwe=cwes[0],
+                    cwe=cwes[-1],
                     static_finding=True,  # by definition
                     dynamic_finding=False,  # by definition
                     file_path=file_path,

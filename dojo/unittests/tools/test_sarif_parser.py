@@ -194,7 +194,6 @@ class TestSarifParser(TestCase):
         )
         self.assertIsNone(finding.cve)
         self.assertEqual(datetime.datetime(2021, 3, 23, 0, 10, 48, tzinfo=datetime.timezone.utc), finding.date)
-        print(finding.cwe)
         self.assertEqual(327, finding.cwe)
         # finding 1
         finding = findings[1]
@@ -204,7 +203,6 @@ class TestSarifParser(TestCase):
         )
         self.assertEqual(235, finding.line)
         self.assertEqual(datetime.datetime(2021, 3, 23, 0, 10, 48, tzinfo=datetime.timezone.utc), finding.date)
-        print(finding.cwe)
         self.assertEqual(798, finding.cwe)
         for finding in findings:
             self.common_checks(finding)
