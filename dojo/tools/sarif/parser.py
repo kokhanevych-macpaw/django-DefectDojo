@@ -174,7 +174,7 @@ def get_item(result, rules, artifacts, run_date):
     # we add a special 'None' case if there is no CWE
     cwes = [0]
     if rule is not None:
-        cwes_extracted = get_rule_cwes(rule)
+        cwes_extracted = get_rule_cwes(result)
         if len(cwes_extracted) > 0:
             cwes = cwes_extracted
 
